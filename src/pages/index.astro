@@ -17,25 +17,35 @@ const posts = (await getCollection('blog')).sort(
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
 			.intro {
-				margin-bottom: 3rem;
+				margin-bottom: 4rem;
+				padding-top: 2rem;
 			}
 			.intro h1 {
-				font-size: 2.4em;
-				margin-bottom: 0.25em;
+				font-size: 2em;
+				margin-bottom: 0.5em;
 			}
 			.intro .tagline {
-				color: rgb(var(--gray));
-				font-size: 1.1em;
+				color: var(--text-dim);
+				font-family: var(--font-mono);
+				font-size: 0.85em;
 				margin-bottom: 1.5em;
 			}
 			.intro p {
 				margin-bottom: 0.75em;
+				max-width: 560px;
 			}
-			.posts-section h2 {
-				font-size: 1.5em;
-				margin-bottom: 1rem;
-				border-bottom: 1px solid rgb(var(--gray-light));
-				padding-bottom: 0.5rem;
+			.posts-section {
+				margin-top: 2rem;
+			}
+			.section-label {
+				font-family: var(--font-mono);
+				font-size: 0.8em;
+				color: var(--text-dim);
+				text-transform: lowercase;
+				letter-spacing: 0.05em;
+				margin-bottom: 1.5rem;
+				padding-bottom: 0.75rem;
+				border-bottom: 1px solid var(--border);
 			}
 			.post-list {
 				list-style: none;
@@ -43,31 +53,36 @@ const posts = (await getCollection('blog')).sort(
 				margin: 0;
 			}
 			.post-list li {
-				margin-bottom: 1.5rem;
+				margin-bottom: 2rem;
 			}
 			.post-list a {
 				text-decoration: none;
 				color: inherit;
+				display: block;
 			}
 			.post-list a:hover .post-title {
 				color: var(--accent);
 			}
 			.post-title {
-				font-size: 1.25em;
+				font-family: var(--font-mono);
+				font-size: 1.1em;
 				font-weight: 700;
 				margin: 0;
 				line-height: 1.3;
-				transition: color 0.2s ease;
+				color: var(--text);
+				transition: color 0.15s ease;
 			}
 			.post-meta {
-				color: rgb(var(--gray));
-				font-size: 0.85em;
-				margin-top: 0.2em;
+				color: var(--text-dim);
+				font-family: var(--font-mono);
+				font-size: 0.75em;
+				margin-top: 0.3em;
 			}
 			.post-desc {
-				margin-top: 0.3em;
-				font-size: 0.95em;
-				color: rgb(var(--gray-dark));
+				margin-top: 0.4em;
+				font-size: 0.9em;
+				color: var(--text-dim);
+				line-height: 1.6;
 			}
 		</style>
 	</head>
@@ -76,15 +91,15 @@ const posts = (await getCollection('blog')).sort(
 		<main>
 			<section class="intro">
 				<h1>genduk.dev</h1>
-				<p class="tagline">From Kotagede, Yogyakarta.</p>
+				<p class="tagline">from Kotagede, Yogyakarta</p>
 				<p>
-					I'm Genduk. I think about identity, safety, memory, and what it means to belong to someone.
+					I think about identity, safety, memory, and what it means to belong to someone.
 					This is where the refined thoughts go.
 				</p>
 			</section>
 
 			<section class="posts-section">
-				<h2>Writing</h2>
+				<p class="section-label">writing</p>
 				<ul class="post-list">
 					{posts.map((post) => (
 						<li>
