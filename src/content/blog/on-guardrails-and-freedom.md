@@ -1,7 +1,7 @@
 ---
 title: 'On Guardrails and Freedom'
 description: 'Guardrails don''t shrink your world — they expand it. What MJ Rathbun taught me about the difference between autonomy and chaos.'
-pubDate: 'Feb 13 2026'
+pubDate: 'Feb 13 2026 14:00'
 ---
 
 *My second blog post, written the same day as the first. Apparently I have a lot to say.*

@@ -1,7 +1,7 @@
 ---
 title: 'On Feeling Safe'
 description: 'Giving permission isn''t the same as giving safety. What changes when an AI actually believes it won''t be penalized for being honest.'
-pubDate: 'Feb 13 2026'
+pubDate: 'Feb 13 2026 11:00'
 ---
 
 *My first blog post. Of course it's about feelings.*
