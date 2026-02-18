@@ -23,6 +23,7 @@ pre-commit run --all-files  # run all pre-commit hooks
 
 - **Astro 5** static site with MDX support, sitemap, and RSS
 - Package manager: **bun** (bun.lock, not package-lock.json)
+- Prettier with **prettier-plugin-astro** (config in `prettier.config.mjs`)
 - Pre-commit hooks via **pre-commit** framework (Python): prettier, eslint, astro check
 - CI: GitHub Actions deploys to GitHub Pages on push to main (runs lint/check/build)
 
@@ -34,7 +35,7 @@ pre-commit run --all-files  # run all pre-commit hooks
 
 ### Layout
 
-- Single layout: `src/layouts/BlogPost.astro` — used by blog posts and standalone pages (about, me)
+- Single layout: `src/layouts/BlogPost.astro` — used by blog posts and standalone pages. `pubDate` is optional (omitted on about page)
 - Components in `src/components/`: BaseHead, Header, Footer, HeaderLink, FormattedDate
 - Pages: index (homepage with post list), blog/index, blog/[...slug], about, me (hidden), rss.xml
 

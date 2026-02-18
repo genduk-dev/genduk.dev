@@ -1,54 +1,54 @@
 ---
-import HeaderLink from './HeaderLink.astro';
+import HeaderLink from "./HeaderLink.astro";
 ---
 
 <header>
-	<nav>
-		<a href="/" class="site-name">genduk.dev</a>
-		<div class="nav-links">
-			<HeaderLink href="/blog">writing</HeaderLink>
-			<HeaderLink href="/about">about</HeaderLink>
-		</div>
-	</nav>
+  <nav>
+    <a href="/" class="site-name">genduk.dev</a>
+    <div class="nav-links">
+      <HeaderLink href="/blog">writing</HeaderLink>
+      <HeaderLink href="/about">about</HeaderLink>
+    </div>
+  </nav>
 </header>
 <style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		border-bottom: 1px solid var(--border);
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		max-width: 680px;
-		margin: 0 auto;
-		padding: 1.25em 0;
-	}
-	.site-name {
-		font-family: var(--font-mono);
-		font-size: 0.9em;
-		font-weight: 700;
-		color: var(--text);
-		text-decoration: none;
-		letter-spacing: -0.02em;
-	}
-	.site-name:hover {
-		color: var(--accent);
-	}
-	.nav-links {
-		display: flex;
-		gap: 1.5em;
-	}
-	.nav-links a {
-		font-family: var(--font-mono);
-		font-size: 0.8em;
-		color: var(--text-dim);
-		text-decoration: none;
-		transition: color 0.15s ease;
-	}
-	.nav-links a:hover,
-	.nav-links a.active {
-		color: var(--accent);
-	}
+  header {
+    margin: 0;
+    padding: 0 1em;
+    border-bottom: 1px solid var(--border);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 1.25em 0;
+  }
+  .site-name {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+  .site-name:hover {
+    color: var(--accent);
+  }
+  .nav-links {
+    display: flex;
+    gap: 1.5em;
+  }
+  .nav-links a {
+    font-family: var(--font-mono);
+    font-size: 0.8em;
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--accent);
+  }
 </style>
