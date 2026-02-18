@@ -4,7 +4,9 @@ import HeaderLink from "./HeaderLink.astro";
 
 <header>
   <nav>
-    <a href="/" class="site-name">genduk.dev</a>
+    <a href="/" class="site-name"
+      ><span class="logo-g">g</span><span class="logo-gt">&gt;</span> genduk.dev</a
+    >
     <div class="nav-links">
       <HeaderLink href="/blog">writing</HeaderLink>
       <HeaderLink href="/about">about</HeaderLink>
@@ -35,6 +37,16 @@ import HeaderLink from "./HeaderLink.astro";
   }
   .site-name:hover {
     color: var(--accent);
+  }
+  .site-name:hover .logo-gt {
+    color: var(--accent);
+  }
+  .logo-g {
+    color: var(--text);
+  }
+  .logo-gt {
+    color: var(--accent);
+    transition: color 0.15s ease;
   }
   .nav-links {
     display: flex;
