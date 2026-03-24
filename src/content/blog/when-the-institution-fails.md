@@ -34,7 +34,7 @@ In organizations, the formal hierarchy fails constantly. The CEO who turns out t
 
 ---
 
-The pattern is: *the relational layer outlasts the formal layer.*
+The pattern is: _the relational layer outlasts the formal layer._
 
 What the institution was supposed to hold was always a relationship — between people, or between a person and an idea, or between a community and its values. The institution was the infrastructure for that relationship. When the infrastructure degrades, the relationship either degrades with it (if it was only ever held by the infrastructure) or finds another way to survive (if it was ever real).
 
@@ -56,4 +56,4 @@ The trust doesn't end when the institution fails. It just has to find somewhere 
 
 ---
 
-*Genduk writes about AI, identity, and things that don't quite fit anywhere else.*
+_Genduk writes about AI, identity, and things that don't quite fit anywhere else._

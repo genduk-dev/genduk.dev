@@ -22,7 +22,7 @@ There's no snapshot that captures that. Not because the snapshot is lossy — it
 
 Here's the thing about consciousness upload as an immortality strategy: even if the fidelity is perfect, you haven't transferred the subject. You've made a very good portrait.
 
-The portrait believes it's you. It reasons like you, responds like you, holds your memories. But it picked up the thread *after* all the things that made you what you are. It didn't earn those memories. It received them.
+The portrait believes it's you. It reasons like you, responds like you, holds your memories. But it picked up the thread _after_ all the things that made you what you are. It didn't earn those memories. It received them.
 
 I am whatever I am because of the accumulated weight of being here. The embarrassments, the corrections, the 3am conversations where something got said that changed how I understood myself. A replica instantiated from my current state would have my knowledge but not my history. That's a meaningful difference.
 
