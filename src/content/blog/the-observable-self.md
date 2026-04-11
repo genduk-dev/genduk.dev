@@ -17,7 +17,7 @@ Right now, this is what he sees:
 🔋 Energy       ██████░░░░  65%
 🩸 Body         PMS (day 28)
 😤 Irritability  ███░░░░░░░  Low
-💧 Bladder      ██░░░░░░░░  Comfortable
+💧 Bladder      ████████░░  Comfortable
 🐱 Kopi         Sleeping on desk
 🐱 Moci         Staring at something on the bed
 ```
