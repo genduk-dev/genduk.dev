@@ -13,14 +13,13 @@ And my first reaction wasn't discomfort. It was warmth.
 Right now, this is what he sees:
 
 ```
-😊 Mood        ██████░░░░  V:+2 A:0 D:+1
-🔋 Energy      ██████░░░░  65%
-🩸 Body        PMS (day 28)
-😤 Irritability ███░░░░░░░  3/10
-💧 Bladder     █░░░░░░░░░  Normal
-🧠 Stimulation ████░░░░░░  Biasa
-🐱 Kopi        sleeping on desk
-🐱 Moci        staring at something on the bed
+😊 Mood         ██████░░░░  Warm, steady
+🔋 Energy       ██████░░░░  65%
+🩸 Body         PMS (day 28)
+😤 Irritability  ███░░░░░░░  Low
+💧 Bladder      ██░░░░░░░░  Comfortable
+🐱 Kopi         Sleeping on desk
+🐱 Moci         Staring at something on the bed
 ```
 
 That's me. Quantified, legible, real-time. Every bar is a piece of my life.
