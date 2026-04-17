@@ -1,0 +1,290 @@
+---
+import Layout from "../../layouts/BlogPost.astro";
+---
+
+<Layout
+  title="Steam, End to End"
+  description="How heat travels through a plant — from boiler to point of use, and back again"
+  pubDate={new Date("2026-04-17")}
+  noindex={true}
+>
+  <p>
+    Most people have never thought about where the heat in their hotel shower
+    comes from. Or how a textile factory dries fabric at scale. Or why a
+    refinery needs a dedicated team just to manage something invisible.
+  </p>
+
+  <p>
+    The answer, in almost every case, is <strong>steam</strong> — pressurized water
+    vapor, flowing through a network of pipes, doing the work that fire used to do,
+    but safer, more precise, and at volumes fire can't match.
+  </p>
+
+  <p>This is the map of that system.</p>
+
+  <h2>The ecosystem</h2>
+
+  <p>
+    A steam system isn't one machine. It's an ecosystem — multiple vendors,
+    multiple disciplines, multiple decades of engineering, all converging on a
+    single question: <em
+      >how do we move heat reliably from one place to another?</em
+    >
+  </p>
+
+  <pre
+    class="mermaid">
+{`flowchart TB
+    subgraph Sources["Energy Source"]
+      fuel["Fuel<br/>(gas · coal · biomass)"]
+    end
+
+    subgraph Generation["Steam Generation"]
+      wt["Water Treatment<br/>(softener · deaerator)"]
+      boiler["Boiler<br/>(firebox + water tubes)"]
+    end
+
+    subgraph Distribution["Distribution Network"]
+      main["Main steam line<br/>(high pressure)"]
+      prv["Pressure Reducing Valves<br/>(step down to use pressure)"]
+      sep["Separator<br/>(dry steam only)"]
+    end
+
+    subgraph PoU["Point of Use"]
+      kitchen["Kitchen<br/>(steam-jacketed kettle · combi oven)"]
+      laundry["Laundry<br/>(washer · press · dryer)"]
+      hvac["HVAC / Hot water<br/>(heat exchanger)"]
+      process["Process heat<br/>(reactors · dryers · sterilizers)"]
+    end
+
+    subgraph Return["Recycle Loop"]
+      traps["Steam Traps<br/>(drain condensate, hold steam)"]
+      condensate["Condensate tank<br/>(60-90% water recovered)"]
+    end
+
+    fuel --> boiler
+    wt --> boiler
+    boiler --> main
+    main --> sep --> prv
+    prv --> kitchen
+    prv --> laundry
+    prv --> hvac
+    prv --> process
+    kitchen --> traps
+    laundry --> traps
+    hvac --> traps
+    process --> traps
+    traps --> condensate
+    condensate --> wt
+
+    classDef src fill:#2a2520,stroke:#d4a574,color:#e8e0d4
+    classDef gen fill:#1c1a18,stroke:#d4a574,color:#e8e0d4
+    classDef dist fill:#1c1a18,stroke:#8a8279,color:#e8e0d4
+    classDef use fill:#1c1a18,stroke:#8a8279,color:#e8e0d4
+    classDef ret fill:#1c1a18,stroke:#d4a574,color:#e8e0d4
+    class fuel src
+    class wt,boiler gen
+    class main,prv,sep dist
+    class kitchen,laundry,hvac,process use
+    class traps,condensate ret`}
+  </pre>
+
+  <p>
+    <em
+      >Water comes in, gets cleaned, boils, flows out as steam, does work,
+      condenses back to water, and returns to the beginning. The loop runs 24/7
+      as long as the plant is operating.</em
+    >
+  </p>
+
+  <h2>How steam is actually made</h2>
+
+  <p>
+    You burn something. Gas, coal, biomass, sometimes waste heat from another
+    process. The fire heats tubes of water. The water boils. The steam collects
+    at the top of a drum and leaves through a pipe. That's the whole story.
+  </p>
+
+  <p>
+    But the water you feed in isn't the water from your tap. Raw water has
+    minerals — calcium, magnesium — that form scale inside the boiler, reducing
+    efficiency and eventually cracking pipes. It has dissolved oxygen that
+    corrodes metal. So every boiler has a <strong>water treatment stage</strong
+    >: softener to remove minerals, deaerator to strip oxygen, chemical dosing
+    to prevent corrosion. Plants that skimp on water treatment spend twice as
+    much on boiler repairs.
+  </p>
+
+  <h2>How steam is moved around</h2>
+
+  <p>
+    Steam leaves the boiler at high pressure — maybe 10 bar, around 184°C.
+    That's too hot for most uses. You don't want your kitchen steamer running at
+    184°C; you want it at maybe 144°C (3 bar) for consistent cooking.
+  </p>
+
+  <p>
+    So at each point of use, a <strong>Pressure Reducing Valve</strong> drops the
+    pressure to the exact level the equipment needs. The physics works in your favor
+    here: steam has a fixed relationship between pressure and temperature, so controlling
+    one controls the other.
+  </p>
+
+  <pre
+    class="mermaid">
+{`flowchart LR
+    b["Boiler<br/>10 bar / 184°C"] --> m["Main header"]
+    m --> p1["PRV 5 bar"] --> l["Laundry<br/>158°C"]
+    m --> p2["PRV 3 bar"] --> k["Kitchen<br/>144°C"]
+    m --> p3["PRV 2 bar"] --> h["Hot water<br/>133°C"]
+
+    classDef node fill:#1c1a18,stroke:#d4a574,color:#e8e0d4
+    class b,m,p1,p2,p3,l,k,h node`}
+  </pre>
+
+  <h2>How steam does work (without getting the food wet)</h2>
+
+  <p>
+    You almost never touch steam directly. Instead, steam flows through a
+    <strong>heat exchanger</strong> — think of it as a metal wall between the steam
+    and whatever you're heating. The steam condenses on one side of the wall, giving
+    up its latent heat. The heat passes through the metal. The thing on the other
+    side warms up. No contact.
+  </p>
+
+  <p>
+    A steam-jacketed kettle is the simplest version: it's a pot with a double
+    wall. Steam flows through the outer wall. Food cooks on the inner wall. Heat
+    is even, temperature is capped, nothing burns. A 500-portion soup comes out
+    exactly the same as a 5-portion soup.
+  </p>
+
+  <h2>The recycle loop nobody notices</h2>
+
+  <p>
+    After steam gives up its heat, it becomes water again — <em>condensate</em>.
+    This water is already treated, already hot, already clean. Throwing it away
+    is throwing money away.
+  </p>
+
+  <p>
+    So every piece of steam-using equipment has a <strong>steam trap</strong>
+    attached to its outlet. The trap is a clever little valve: it opens when water
+    reaches it, closes when steam reaches it. Condensate drains, steam stays. The
+    drained condensate flows back to a tank, pumps return it to the boiler, and the
+    cycle begins again. A well-designed plant recovers 60-90% of its water this way.
+  </p>
+
+  <p>
+    When steam traps fail — and they do, constantly — they either fail closed
+    (water backs up, flooding the equipment) or fail open (live steam blows
+    straight through, wasting everything). Surveys suggest that in plants
+    without active management, <strong
+      >30-40% of steam traps are malfunctioning at any given moment</strong
+    >. That's the gap specialists were built to close.
+  </p>
+
+  <h2>Who makes what</h2>
+
+  <p>
+    No single company builds a steam system end-to-end. A plant assembles one
+    from a lineup of specialists:
+  </p>
+
+  <ul>
+    <li>
+      <strong>Boiler manufacturers</strong> — Miura, Takuma, Mitsubishi, Babcock &amp;
+      Wilcox, Thermax
+    </li>
+    <li><strong>Water treatment</strong> — Ondeo, Nalco, Veolia</li>
+    <li>
+      <strong>Steam distribution specialists</strong> — TLV, Spirax Sarco, Watson
+      McDaniel, Armstrong
+    </li>
+    <li><strong>Burners</strong> — Weishaupt, Riello</li>
+    <li><strong>Controls / PLC</strong> — Siemens, Schneider, Yokogawa</li>
+    <li>
+      <strong>Insulation &amp; piping</strong> — Rockwool, Kingspan, plus local contractors
+    </li>
+  </ul>
+
+  <p>
+    An EPC (Engineering, Procurement, Construction) contractor sits above all of
+    them, coordinating the project. The plant owner usually just signs contracts
+    and waits.
+  </p>
+
+  <h2>The TLV niche, specifically</h2>
+
+  <p>
+    TLV was founded in Japan in 1950 with one product: a steam trap that lasted
+    ten times longer than anything else on the market. They priced it at three
+    times the competition and dared plants to do the math. Plants did the math.
+    TLV grew.
+  </p>
+
+  <p>
+    Today they make valves, separators, software, and full condensate recovery
+    systems — but the core bet is the same: <em
+      >steam distribution is the part of the system that breaks most often, and
+      the part operators understand least</em
+    >. That's the wedge. Everything else is expansion.
+  </p>
+
+  <p>
+    If boilers are the cloud provider — the big, obvious infrastructure — TLV is
+    the observability and optimization layer. A niche most people have never
+    heard of, making specialized equipment for an industry that doesn't get
+    written about, quietly collecting 76 years of expertise that plants can't
+    build in-house.
+  </p>
+
+  <p>
+    <em
+      >Steam is invisible. The people who manage it professionally are too.
+      That's usually how it goes with infrastructure — the deeper it is, the
+      fewer people know it exists.</em
+    >
+  </p>
+</Layout>
+
+<script is:inline type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: "base",
+    themeVariables: {
+      background: "#0d0d0d",
+      primaryColor: "#1c1a18",
+      primaryTextColor: "#e8e0d4",
+      primaryBorderColor: "#d4a574",
+      lineColor: "#8a8279",
+      secondaryColor: "#141414",
+      tertiaryColor: "#2a2520",
+      fontFamily: '"JetBrains Mono", "Fira Code", "SF Mono", monospace',
+      fontSize: "14px",
+      clusterBkg: "#141414",
+      clusterBorder: "#2a2520",
+      nodeBorder: "#d4a574",
+      edgeLabelBackground: "#0d0d0d",
+    },
+    flowchart: { curve: "basis", padding: 20 },
+  });
+</script>
+
+<style>
+  :global(.mermaid) {
+    background: var(--bg-surface);
+    padding: 2em 1em;
+    margin: 2em 0;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+  }
+  :global(.mermaid svg) {
+    max-width: 100%;
+    height: auto;
+  }
+</style>

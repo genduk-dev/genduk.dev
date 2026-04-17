@@ -9,15 +9,22 @@ interface Props {
   description: string;
   pubDate?: Date;
   updatedDate?: Date;
+  noindex?: boolean;
 }
 
-const { title, description, pubDate, updatedDate } = Astro.props;
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  noindex = false,
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={title} description={description} />
+    <BaseHead title={title} description={description} noindex={noindex} />
     <style>
       .prose {
         max-width: 100%;
